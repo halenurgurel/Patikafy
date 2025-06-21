@@ -28,7 +28,13 @@ namespace Patikafy
 
         public void GetLibrary() //Direkt yazdırabilmek için metot tanımladık.
         {
-            Console.WriteLine($"Sanatçının adı: {FullName}, Yaptığı Müzik Türü: {Genres}, Çıkış Yılı: {ReleaseYear}, Albüm Satışları: {Sales}");
+            string genresFormatted = string.Join(", ", Genres);
+
+            Console.WriteLine($"Sanatçının adı: {FullName}");
+            Console.WriteLine($"Yaptığı Müzik Türü: {genresFormatted}");
+            Console.WriteLine($"Çıkış Yılı: {ReleaseYear}");
+            Console.WriteLine($"Albüm Satışları: {Sales:N0}");
+            Console.WriteLine(" ");
         }
     }
 }

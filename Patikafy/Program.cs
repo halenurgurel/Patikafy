@@ -19,6 +19,11 @@ var artists = new List<MusicLibrary>
     new("Neşet Ertaş", new List<string> {"Türk Halk Müziği", "Türk Sanat Müziği" }, 1960, 2000000),
 };
 
+foreach (var artist in artists)
+{
+    artist.GetLibrary();
+}
+
 //Linq sorguları
 
 
@@ -46,7 +51,7 @@ Console.WriteLine("Albüm Satışları 10 Milyonun Üzerinde Olan Sanatçılar: 
 Console.WriteLine(" ");
 foreach(var artist in mmoreThanTenMillion)
 {
-    Console.WriteLine($"{artist.FullName} -> {artist.Sales} milyon.");
+    Console.WriteLine($"{artist.FullName} -> {artist.Sales:N0}");
 }
 
 Console.WriteLine();
@@ -83,7 +88,7 @@ Console.WriteLine();
 var topSeller = artists.OrderByDescending(artists => artists.Sales).First();
 
 Console.WriteLine("En çok Albüm Satan Sanatçı: ");
-    Console.WriteLine($"{topSeller.FullName} - {topSeller.Sales:N0} milyon.");
+    Console.WriteLine($"{topSeller.FullName} - {topSeller.Sales:N0}");
 
 Console.WriteLine();
 Console.WriteLine();
