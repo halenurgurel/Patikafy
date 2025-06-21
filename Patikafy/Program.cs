@@ -19,13 +19,15 @@ var artists = new List<MusicLibrary>
     new("Neşet Ertaş", new List<string> {"Türk Halk Müziği", "Türk Sanat Müziği" }, 1960, 2000000),
 };
 
+//Tüm sanatçıları, türlerini, albüm çıkış yıllarını ve satışlarını yazdırdık.
+Console.WriteLine("--Şarkıcı Listesi--");
 foreach (var artist in artists)
 {
     artist.GetLibrary();
 }
 
 //Linq sorguları
-
+Console.WriteLine("--Linq Sorguları--");
 
 //Adı 'S' ile başlayan Şarkıcılar.
 
